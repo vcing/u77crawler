@@ -1,0 +1,32 @@
+{
+  "name": "u77crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "server",
+    "dev": "pm2 start ./server --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vcing/u77crawler.git"
+  },
+  "author": "Vcing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vcing/u77crawler/issues"
+  },
+  "homepage": "https://github.com/vcing/u77crawler#readme",
+  "dependencies": {
+    "app-store-scraper": "^0.7.0",
+    "babel-core": "^6.25.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.3",
+    "google-play-scraper": "^3.3.1",
+    "moment": "^2.18.1"
+  }
+}
