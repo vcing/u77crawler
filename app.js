@@ -53,12 +53,35 @@ app.get('/data',async (req,res,next) => {
         country:'us',
         num:100
     })]);
-    res.json({
-        appStoreFree:results[0],
-        appStorePaid:results[1],
-        gplayFree:results[2],
-        gplayPaid:results[3]
+
+    let games = results.map((result,index) => {
+        return result.map((game) => {
+            let platform,type;
+            switch(index) {
+                case 0:
+                    platform = 'iOS';
+                    type = 'free';
+                case 1:
+                    platform = 'iOS';
+                    type = 'paid';
+                case 2:
+                    platform = 'Android';
+                    type = 'free';
+                case 3:
+                    platform = 'Android';
+                    type = 'paid';
+            }
+            return {
+                title:game.title,
+                icon:game.icon,
+                url:game.url,
+                platform,
+                type
+            }
+        });
     });
+
+    res.json([].concat(...games));
 })
 
 app.get('/ping',(req,res,next) => {
