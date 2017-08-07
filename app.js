@@ -77,15 +77,19 @@ app.get('/data', async (req, res, next) => {
                 case 0:
                     platform = 'iOS';
                     type = 'free';
+                    break;
                 case 1:
                     platform = 'iOS';
                     type = 'paid';
+                    break;
                 case 2:
                     platform = 'Android';
                     type = 'free';
+                    break;
                 case 3:
                     platform = 'Android';
                     type = 'paid';
+                    break;
             }
             return {
                 title: game.title,
